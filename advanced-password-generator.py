@@ -35,22 +35,27 @@ def replace_w_uppercase(new_password):
 
 def main():
     
-    password_num = int (input("How many passwords you wan to generate? "))
-    print("Generating " +str(password_num) + " passwords")
+    print("\t\t**Password Generator**\n")
+
+    password_num = int (input("\tHow many passwords you wan to generate? "))
+    print("\n\tGenerating [" +str(password_num) + "]" + " passwords\n")
 
     pword_length = []
-    print("The minimum length of password should be 6")
+    print("\tThe minimum length of password should be 6\n")
 
     for i in range(password_num):
-        length = int(input("Enter you desired password length on password [" + str(i+1) + "] : " ))
+        length = int(input("\tEnter your desired password length on password [" + str(i+1) + "] : " ))
         if length <= 6:
             length = 6
         pword_length.append(length)
-    
+    print()
+
+    print ("\tThe generated passwords are: \n")
     Password = generate_password(pword_length)
-
     for i in range(password_num):
-        print ("Password [" +str(i+1) + "]" + " = " + Password[i]) 
+        print ("\tPassword [" +str(i+1) + "]" + " = " + Password[i]) 
 
+    print()
+    
 main()
 
