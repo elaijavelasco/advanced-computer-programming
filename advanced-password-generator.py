@@ -1,3 +1,4 @@
+#this program is a simple password generator
 import random
 
 def generate_password(password_len):
