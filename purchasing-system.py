@@ -9,7 +9,7 @@ class Main:
     def display_menu(self):
         pass
     
-    def add_item(self):
+    def add_product(self):
         num = int (input ("Enter the number of items you want to add: "))
         
         for i in range(num):
@@ -20,5 +20,9 @@ class Main:
             new_product_price = int (input ("Enter the Product Price: "))
             item = [{"id" : new_product_id, "name" : new_product_name, "quantity" : new_product_quantity, "type" : new_product_type, "price" : new_product_price}]
             dress.extend(item)
+    
+    def remove_product(self):
+        item_id = int (input("Enter the product ID you want to remove: "))
+        found = False
 
      
