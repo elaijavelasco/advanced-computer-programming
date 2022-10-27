@@ -1,3 +1,7 @@
+product_list = [{"id" : 21021, "name" : "Mouse", "quantity" : 100, "type" : "Gadget Accessory", "price" : 399}
+    {"id" : 21022, "name" : "Mouse Pad", "quantity" : 100, "type" : "Gadget Accessory", "price" : 199}
+    {"id" : 21023, "name" : "Keyboard", "quantity" : 50, "type" : "Gadget Accessory", "price" : 599}]
+
 class Main:
     def show_menu(self):
         while True:
