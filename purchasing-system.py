@@ -6,7 +6,7 @@ item1 = product_list
 temp_product_list = []
 order = ""
 
-class Main:
+class admin_menu:
     def show_menu(self):
         while True:
             print ("Purchasing System")
@@ -14,11 +14,11 @@ class Main:
             print ("2 - Add Products")
             print ("3 - Remove Products")
             print ("4 - Search Products")
-            print ("5 - Update Products")
+            print ("5 - Total")
             print ("6 - Exit")
   
 #Function Definition
-    def display_menu(self):
+    def display_product(self):
         pass
     
     #function for adding new products
@@ -58,6 +58,28 @@ class Main:
     
     #function for searching products
     def search_product(self):
+        if product_list == NULL:
+            print ("There is no product listed in the product list!")
+    
+        while product_list != NULL:
+            item_id = int (input("Enter the product ID to see product details: "))
+            false = False
+
+            for item in product_list:
+                found = item["id"] == item_id
+                if found != True:
+                    print (f"Product ID: {item_id}")
+                    print (f"Product Name: {item_id["name"]}")
+                    print (f"Quantity: {item_id["quantity"]}")
+                    print (f"Type: {item_id["type"]}")
+                    print (f"Price: {item_id["price"]}")
+    
+    def total(self):
         pass
+                
+
+
+
+        
 
      
