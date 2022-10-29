@@ -2,6 +2,10 @@ product_list = [{"id" : 21021, "name" : "Mouse", "quantity" : 100, "type" : "Gad
     {"id" : 21022, "name" : "Mouse Pad", "quantity" : 100, "type" : "Gadget Accessory", "price" : 199}
     {"id" : 21023, "name" : "Keyboard", "quantity" : 50, "type" : "Gadget Accessory", "price" : 599}]
 
+item1 = product_list
+temp_product_list = []
+order = ""
+
 class Main:
     def show_menu(self):
         while True:
@@ -12,7 +16,7 @@ class Main:
             print ("4 - Search Products")
             print ("5 - Exit")
   
-  #Function Definition
+#Function Definition
     def display_menu(self):
         pass
     
@@ -32,6 +36,24 @@ class Main:
     #function for removing products
     def remove_product(self):
         item_id = int (input("Enter the product ID you want to remove: "))
+        
+        found = False #To renew found variable to False at the end of each loop
+        
+        for item in product_list:
+            found = item["id"] == item_id
+            if found != True:
+                temp_product_list.append(item)
+                continue
+            elif found == True:
+                item["quantity"] -= 1
+        print ("Deleting the item...")
+
+        if len(temp_product_list) == item:
+            print(f"{item_id} not found") #{} placeholder for integer value
+        else:
+            print (f"{item_id} is removed from the list.")
+
+
     
     #function for searching products
     def search_product(self):
