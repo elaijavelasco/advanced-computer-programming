@@ -10,10 +10,13 @@ class Main:
             print ("2 - Add Products")
             print ("3 - Remove Products")
             print ("4 - Search Products")
-
+            print ("5 - Exit")
+  
+  #Function Definition
     def display_menu(self):
         pass
     
+    #function for adding new products
     def add_product(self):
         num = int (input ("Enter the number of items you want to add: "))
         
@@ -26,9 +29,11 @@ class Main:
             item = [{"id" : new_product_id, "name" : new_product_name, "quantity" : new_product_quantity, "type" : new_product_type, "price" : new_product_price}]
             dress.extend(item)
     
+    #function for removing products
     def remove_product(self):
         item_id = int (input("Enter the product ID you want to remove: "))
     
+    #function for searching products
     def search_product(self):
         pass
 
