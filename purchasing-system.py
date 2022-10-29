@@ -9,6 +9,7 @@ class Main:
             print ("1 - Display Products")
             print ("2 - Add Products")
             print ("3 - Remove Products")
+            print ("4 - Search Products")
 
     def display_menu(self):
         pass
@@ -27,5 +28,8 @@ class Main:
     
     def remove_product(self):
         item_id = int (input("Enter the product ID you want to remove: "))
+    
+    def search_product(self):
+        pass
 
      
