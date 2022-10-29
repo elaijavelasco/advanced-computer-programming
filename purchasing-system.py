@@ -14,7 +14,8 @@ class Main:
             print ("2 - Add Products")
             print ("3 - Remove Products")
             print ("4 - Search Products")
-            print ("5 - Exit")
+            print ("5 - Update Products")
+            print ("6 - Exit")
   
 #Function Definition
     def display_menu(self):
