@@ -27,6 +27,5 @@ class Main:
     
     def remove_product(self):
         item_id = int (input("Enter the product ID you want to remove: "))
-        found = False
 
      
