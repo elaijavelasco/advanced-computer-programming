@@ -6,18 +6,47 @@ item1 = product_list
 temp_product_list = []
 order = ""
 
+
 class admin_menu:
     def show_menu(self):
         while True:
             print ("Purchasing System")
-            print ("1 - Display Products")
-            print ("2 - Add Products")
-            print ("3 - Remove Products")
-            print ("4 - Search Products")
-            print ("5 - Total Products Available")
-            print ("6 - Exit")
-  
+            print ("1 - Admin Login")
+            print ("2 - Display Products")
+            print ("3 - Add Products")
+            print ("4 - Remove Products")
+            print ("5 - Search Products")
+            print ("6 - Total Products Available")
+            print ("7 - Log out")
+            print ("8 - Exit")
+        
+        admin_choice = ""
+        try: admin_choice = int (input ("What do you want to do? "))
+        except value_error:
+            print ("Invalid Input!")
+        
+        if admin_choice == 1:
+            self.login()
+        elif admin_choice == 2:
+            self.display_product()
+        elif admin_choice == 3:
+            self.add_product()
+        elif admin_choice == 4:
+            self.remove_product()
+        elif admin_choice == 5:
+            self.search_product()
+        elif admin_choice == 6:
+            self.total_product()
+        elif admin_choice == 7:
+            self.admin_logout()
+        elif admin_choice == 8:
+            print ("Admin menu terminated...")
+            break
+
 #Function Definition
+    def admin_login(self):
+        pass
+
     def display_product(self):
         pass
     
@@ -53,8 +82,6 @@ class admin_menu:
             print(f"{item_id} not found") #{} placeholder for integer value
         else:
             print (f"{item_id} is removed from the list.")
-
-
     
     #function for searching products
     def search_product(self):
@@ -80,6 +107,12 @@ class admin_menu:
             print (f"{d["name"]} = {d["quantity"]}")
             total += ({d["quantity"]})
             print( "Total products available: ", total)
+    
+    def admin_logout(self):
+        pass
+
+
+
 
 
                 
