@@ -14,7 +14,7 @@ class admin_menu:
             print ("2 - Add Products")
             print ("3 - Remove Products")
             print ("4 - Search Products")
-            print ("5 - Total")
+            print ("5 - Total Products Available")
             print ("6 - Exit")
   
 #Function Definition
@@ -74,8 +74,14 @@ class admin_menu:
                     print (f"Type: {item_id["type"]}")
                     print (f"Price: {item_id["price"]}")
     
-    def total(self):
-        pass
+    def total_product(self):
+        total = 0
+        for item in product_list:
+            print (f"{d["name"]} = {d["quantity"]}")
+            total += ({d["quantity"]})
+            print( "Total products available: ", total)
+
+
                 
 
 
