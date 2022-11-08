@@ -6,20 +6,32 @@ item1 = product_list
 temp_product_list = []
 order = "" 
 """
+class admin_update_mixin:
+    def change_admin_password (self, new_admin_password):
+        self.admin_password = new_admin_password
 
+class admin (admin_update_mixin):
+    def __init__(self, admin_username, admin_password):
+        self.admin_username = admin_username
+        self.admin_password = admin_password
+        self.original_admin_username = admin_username
+    
+    def update_admin_orig_username (self):
+        self.original_admin_username = self.admin_username
 
 class admin_menu:
     def show_menu(self):
         while True:
             print ("Purchasing System")
             print ("1 - Admin Login")
-            print ("2 - Display Products")
-            print ("3 - Add Products")
-            print ("4 - Remove Products")
-            print ("5 - Search Products")
-            print ("6 - Total Products Available")
-            print ("7 - Log out")
-            print ("8 - Exit")
+            print ("2 - Change Password")
+            print ("3 - Display Products")
+            print ("4 - Add Products")
+            print ("5 - Remove Products")
+            print ("6 - Search Products")
+            print ("7 - Total Products Available")
+            print ("8 - Log out")
+            print ("9 - Exit")
         
         admin_choice = ""
         try: admin_choice = int (input ("What do you want to do? "))
@@ -29,23 +41,29 @@ class admin_menu:
         if admin_choice == 1:
             self.login()
         elif admin_choice == 2:
-            self.display_product()
+            self.change_admin_password()
         elif admin_choice == 3:
-            self.add_product()
+            self.display_product()
         elif admin_choice == 4:
-            self.remove_product()
+            self.add_product()
         elif admin_choice == 5:
-            self.search_product()
+            self.remove_product()
         elif admin_choice == 6:
-            self.total_product()
+            self.search_product()
         elif admin_choice == 7:
-            self.admin_logout()
+            self.total_product()
         elif admin_choice == 8:
+            self.admin_logout()
+        elif admin_choice == 9:
             print ("Admin menu terminated...")
             break
 
 #Function Definition
     def admin_login(self):
+        admin_username = input("Enter username: ")
+        admin_password = input("Enter password: ")
+    
+    def change_admin_password(self):
         pass
 
     def display_product(self):
