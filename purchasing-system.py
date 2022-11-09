@@ -39,7 +39,7 @@ class admin_menu:
             print ("Invalid Input!")
         
         if admin_choice == 1:
-            self.login()
+            self.admin_login()
         elif admin_choice == 2:
             self.change_admin_password()
         elif admin_choice == 3:
@@ -57,6 +57,9 @@ class admin_menu:
         elif admin_choice == 9:
             print ("Admin menu terminated...")
             break
+        else:
+            print ("Invalid input. Please enter valid choice.")
+            self.admin_login()
 
 #Function Definition
     def admin_login(self):
