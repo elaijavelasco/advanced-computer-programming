@@ -56,7 +56,6 @@ class Admin_Menu:
             self.admin_logout()
         elif admin_choice == 9:
             print ("Admin menu terminated...")
-            break
         else:
             print ("Invalid input. Please enter valid choice.")
             self.admin_login()
