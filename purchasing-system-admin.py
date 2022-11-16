@@ -1,14 +1,16 @@
-"""product_list = [{"id" : , "name" : , "quantity" : , "type" : , "price" : }]
+"""product_list = [{"id" : 21021, "name" : "Mouse", "quantity" : 100, "type" : "Gadget Accessory", "price" : 399}
+    {"id" : 21022, "name" : "Mouse Pad", "quantity" : 100, "type" : "Gadget Accessory", "price" : 199}
+    {"id" : 21023, "name" : "Keyboard", "quantity" : 50, "type" : "Gadget Accessory", "price" : 599}]
 
 item1 = product_list
 temp_product_list = []
 order = "" 
 """
-class admin_update_mixin:
+class Admin_Update_Mixin:
     def change_admin_password (self, new_admin_password):
         self.admin_password = new_admin_password
 
-class admin (admin_update_mixin):
+class Admin (Admin_Update_Mixin):
     def __init__(self, admin_username, admin_password):
         self.admin_username = admin_username
         self.admin_password = admin_password
@@ -17,7 +19,7 @@ class admin (admin_update_mixin):
     def update_admin_orig_username (self):
         self.original_admin_username = self.admin_username
 
-class admin_menu:
+class Admin_Menu:
     def show_menu(self):
         while True:
             print ("Purchasing System")
@@ -75,9 +77,9 @@ class admin_menu:
         num = int (input ("Enter the number of items you want to add: "))
         
         for i in range(num):
-            new_product_id = int (input ("Enter the Product ID: " ))
+            new_product_id = int (input ("Enter the Product ID:" ))
             new_product_name = input ("Enter the Product Name: ")
-            new_product_quantity = int (input ("Enter the Quantity of Product: "))
+            new_product_quantity = int (input ("Enter the Quantity of Product:"))
             new_product_type = input ("Enter the Product Type: ")
             new_product_price = int (input ("Enter the Product Price: "))
             item = [{"id" : new_product_id, "name" : new_product_name, "quantity" : new_product_quantity, "type" : new_product_type, "price" : new_product_price}]
